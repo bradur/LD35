@@ -159,7 +159,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.16199984, y: 0.498}
+  m_ConnectedAnchor: {x: 0.16199984, y: 0.49800006}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1166,7 +1166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 460982675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.95, y: -0.263, z: 0}
+  m_LocalPosition: {x: -7.95, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 775290213}
@@ -1671,6 +1671,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 775290213}
   - 212: {fileID: 775290214}
+  - 60: {fileID: 775290215}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -1720,6 +1721,30 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!60 &775290215
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775290212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.2792144, y: -0.032927543}
+      - {x: 0.24331693, y: -0.116144866}
+      - {x: -0.09764607, y: -0.15500149}
+      - {x: -0.16342516, y: -0.004642236}
+      - {x: -0.32167006, y: -0.19868413}
+      - {x: -0.22288236, y: -0.35939714}
+      - {x: -0.17834342, y: -0.39707518}
+      - {x: 0.109375, y: -0.359375}
+      - {x: 0.2946909, y: -0.31590098}
+      - {x: 0.30031487, y: -0.02746433}
 --- !u!1 &855433163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1813,7 @@ GameObject:
   - 4: {fileID: 856356624}
   - 61: {fileID: 856356625}
   - 212: {fileID: 856356626}
+  - 114: {fileID: 856356627}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1856,6 +1882,18 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &856356627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 856356623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.008
 --- !u!1 &870418730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2861,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267438311}
   m_LocalRotation: {x: 0, y: 0, z: -0.004832391, w: 0.9999884}
-  m_LocalPosition: {x: -7.85, y: -0.173, z: 0}
+  m_LocalPosition: {x: -7.85, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2136883752}
