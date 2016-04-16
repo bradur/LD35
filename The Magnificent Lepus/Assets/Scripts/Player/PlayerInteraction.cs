@@ -29,7 +29,7 @@ public class PlayerInteraction : MonoBehaviour
     private float glideGravityScale;
 
     [SerializeField]
-    private PolygonCollider2D collider;
+    private CircleCollider2D collider;
     private PhysicsMaterial2D originalMaterial;
 
     [SerializeField]
