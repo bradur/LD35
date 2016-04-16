@@ -1454,6 +1454,8 @@ MonoBehaviour:
   state: 0
   rb2d: {fileID: 1267438312}
   glideGravityScale: 0.5
+  collider: {fileID: 1267438316}
+  bounceMaterial: {fileID: 6200000, guid: a7aff731d9bb4a145a32ad1a7e890a9b, type: 2}
 --- !u!58 &1267438316
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -28,10 +28,18 @@ public class PlayerInteraction : MonoBehaviour
     [Range(0, 1)]
     private float glideGravityScale;
 
+    [SerializeField]
+    private CircleCollider2D collider;
+    private PhysicsMaterial2D originalMaterial;
+
+    [SerializeField]
+    private PhysicsMaterial2D bounceMaterial;
+
     // Use this for initialization
     void Start()
     {
         originalGravityScale = rb2d.gravityScale;
+        originalMaterial = collider.sharedMaterial;
     }
 
     // Update is called once per frame
@@ -57,10 +65,22 @@ public class PlayerInteraction : MonoBehaviour
         {
             rb2d.gravityScale = originalGravityScale;
         }
+
+        if (state == ShapeShiftState.Bounce && newState != ShapeShiftState.Bounce)
+        {
+            collider.sharedMaterial = originalMaterial;
+        }
+
         state = newState;
+
         if (state == ShapeShiftState.Glide)
         {
             rb2d.gravityScale = glideGravityScale;
+        }
+
+        if (state == ShapeShiftState.Bounce)
+        {
+            collider.sharedMaterial = bounceMaterial;
         }
     }
 }
