@@ -200,8 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theme: {fileID: 6603269}
-  pausePitch: 0.707
-  successPitch: 1.2
+  pausePitch: 0.5
+  successPitch: 1.5
+  pitchSmooth: 4.05
 --- !u!1 &18727509
 GameObject:
   m_ObjectHideFlags: 0
