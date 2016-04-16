@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 909bbd202f0e3554e8ddb086d9cd835b
-timeCreated: 1460791373
+timeCreated: 1460796613
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,7 +64,7 @@ TextureImporter:
         width: 79
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -11.5, y: 34}
@@ -84,7 +84,7 @@ TextureImporter:
         width: 29
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: character_sheet_2
@@ -95,7 +95,7 @@ TextureImporter:
         width: 37
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -11.5, y: 19}
@@ -113,7 +113,7 @@ TextureImporter:
         width: 23
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: character_sheet_4
@@ -123,19 +123,19 @@ TextureImporter:
         y: 292
         width: 71
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.099728115, y: 0.533514}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 33.5, y: 9}
-        - {x: -7.5, y: 16}
-        - {x: -27.5, y: 16}
-        - {x: -35.5, y: -1}
-        - {x: -35.5, y: -16}
-        - {x: -2.5, y: -16}
-        - {x: 33.5, y: -7}
-        - {x: 35.5, y: -3}
-        - {x: 35.5, y: 8}
+      - - {x: 61.919304, y: 7.9275513}
+        - {x: 20.919304, y: 14.927551}
+        - {x: 0.9193039, y: 14.927551}
+        - {x: -7.080696, y: -2.0724487}
+        - {x: -7.080696, y: -17.072449}
+        - {x: 25.919304, y: -17.072449}
+        - {x: 61.919304, y: -8.072449}
+        - {x: 63.919304, y: -4.0724487}
+        - {x: 63.919304, y: 6.9275513}
     - name: character_sheet_5
       rect:
         serializedVersion: 2
@@ -144,7 +144,7 @@ TextureImporter:
         width: 5
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

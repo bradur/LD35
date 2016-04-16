@@ -51,18 +51,18 @@ public class ShapeShift : MonoBehaviour {
             {
                 currentSkill.Clear();
                 nextSkill = skill;
-                Debug.Log("<b>Current skill:</b> " + currentSkill.name + ". Next skill: " + nextSkill.name);
+                //Debug.Log("<b>Current skill:</b> " + currentSkill.name + ". Next skill: " + nextSkill.name);
             }
             else if (!skill.IsInUse())
             {
-                Debug.Log("<b>No skill in use. Use:</b> " + skill.name);
+                //Debug.Log("<b>No skill in use. Use:</b> " + skill.name);
                 skill.Use();
                 currentSkill = skill;
                 pi.SetState(skill.State);
             }
             else
             {
-                Debug.Log("<b>Disabling skill:</b> " + skill.name);
+                //Debug.Log("<b>Disabling skill:</b> " + skill.name);
                 skill.Clear();
                 if (currentSkill != null)
                 {

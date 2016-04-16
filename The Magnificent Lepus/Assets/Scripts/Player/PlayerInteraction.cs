@@ -36,9 +36,11 @@ public class PlayerInteraction : MonoBehaviour
     private PhysicsMaterial2D bounceMaterial;
 
     [SerializeField]
-    private SpriteRenderer leftWing;
-    [SerializeField]
-    private SpriteRenderer rightWing;
+    private Animator animator;
+
+    private bool isAnimating = false;
+
+    private string animationQueue = "";
 
     // Use this for initialization
     void Start()
@@ -66,41 +68,61 @@ public class PlayerInteraction : MonoBehaviour
 
     public void SetState(ShapeShiftState newState)
     {
-        if (newState != state)
+        ClearState();
+
+        if (state == newState)
         {
-            if (state == ShapeShiftState.Glide)
-            {
-                rb2d.gravityScale = originalGravityScale;
-            }
-
-            else if (state == ShapeShiftState.Bounce)
-            {
-                collider.sharedMaterial = originalMaterial;
-            }
-
-            else if (state == ShapeShiftState.Glide)
-            {
-                leftWing.enabled = true;
-                rightWing.enabled = true;
-            }
+            animator.SetTrigger("End");
         }
 
         state = newState;
 
-        if (state == ShapeShiftState.Glide)
-        {
-            rb2d.gravityScale = glideGravityScale;
-        }
-
         if (state == ShapeShiftState.Bounce)
         {
             collider.sharedMaterial = bounceMaterial;
+            StartAnimation("Bounce");
         }
 
         if (state == ShapeShiftState.Glide)
         {
-            leftWing.enabled = true;
-            rightWing.enabled = true;
+            rb2d.gravityScale = glideGravityScale;
+            StartAnimation("Glide");
+        }
+
+        if (state == ShapeShiftState.Drill)
+        {
+            StartAnimation("Drill");
+        }
+    }
+
+    void StartAnimation(string animationTrigger)
+    {
+        ResetTriggers();
+        if (!isAnimating) {
+            animator.SetTrigger(animationTrigger);
+            isAnimating = true;
+            animationQueue = "";
+        }
+        else
+        {
+            animationQueue = animationTrigger;
+            animator.SetTrigger("End");
+        }
+    }
+
+    void ResetTriggers()
+    {
+        animator.ResetTrigger("Drill");
+        animator.ResetTrigger("Glide");
+        animator.ResetTrigger("Bounce");
+    }
+
+    public void AnimationFinished()
+    {
+        isAnimating = false;
+        if (animationQueue != "")
+        {
+            StartAnimation(animationQueue);
         }
     }
 
@@ -108,7 +130,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         rb2d.gravityScale = originalGravityScale;
         collider.sharedMaterial = originalMaterial;
-        leftWing.enabled = false;
-        rightWing.enabled = false;
+        state = ShapeShiftState.None;
     }
 }
