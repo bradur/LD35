@@ -29,11 +29,16 @@ public class PlayerInteraction : MonoBehaviour
     private float glideGravityScale;
 
     [SerializeField]
-    private CircleCollider2D collider;
+    private PolygonCollider2D collider;
     private PhysicsMaterial2D originalMaterial;
 
     [SerializeField]
     private PhysicsMaterial2D bounceMaterial;
+
+    [SerializeField]
+    private SpriteRenderer leftWing;
+    [SerializeField]
+    private SpriteRenderer rightWing;
 
     // Use this for initialization
     void Start()
@@ -61,14 +66,23 @@ public class PlayerInteraction : MonoBehaviour
 
     public void SetState(ShapeShiftState newState)
     {
-        if (state == ShapeShiftState.Glide && newState != ShapeShiftState.Glide)
+        if (newState != state)
         {
-            rb2d.gravityScale = originalGravityScale;
-        }
+            if (state == ShapeShiftState.Glide)
+            {
+                rb2d.gravityScale = originalGravityScale;
+            }
 
-        if (state == ShapeShiftState.Bounce && newState != ShapeShiftState.Bounce)
-        {
-            collider.sharedMaterial = originalMaterial;
+            else if (state == ShapeShiftState.Bounce)
+            {
+                collider.sharedMaterial = originalMaterial;
+            }
+
+            else if (state == ShapeShiftState.Glide)
+            {
+                leftWing.enabled = true;
+                rightWing.enabled = true;
+            }
         }
 
         state = newState;
@@ -82,5 +96,19 @@ public class PlayerInteraction : MonoBehaviour
         {
             collider.sharedMaterial = bounceMaterial;
         }
+
+        if (state == ShapeShiftState.Glide)
+        {
+            leftWing.enabled = true;
+            rightWing.enabled = true;
+        }
+    }
+
+    public void ClearState()
+    {
+        rb2d.gravityScale = originalGravityScale;
+        collider.sharedMaterial = originalMaterial;
+        leftWing.enabled = false;
+        rightWing.enabled = false;
     }
 }

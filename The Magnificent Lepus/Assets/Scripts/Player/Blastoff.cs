@@ -23,6 +23,14 @@ public class Blastoff : MonoBehaviour {
         if (rb2d.IsSleeping())
         {
             rb2d.WakeUp();
+            foreach (Transform child in transform)
+            {
+                Rigidbody2D child_rb2d = child.GetComponent<Rigidbody2D>();
+                if (child_rb2d != null)
+                {
+                    child_rb2d.WakeUp();
+                }
+            }
         }
         //rb2d.AddForce(transform.forward * speed, ForceMode2D.Impulse);
 

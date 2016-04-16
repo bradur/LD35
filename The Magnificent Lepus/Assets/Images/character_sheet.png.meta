@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 909bbd202f0e3554e8ddb086d9cd835b
-timeCreated: 1460775460
+timeCreated: 1460791373
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,8 @@ TextureImporter:
     21300002: character_sheet_1
     21300004: character_sheet_2
     21300006: character_sheet_3
+    21300008: character_sheet_4
+    21300010: character_sheet_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -110,6 +112,37 @@ TextureImporter:
         y: 432
         width: 23
         height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: character_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 292
+        width: 71
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.5, y: 9}
+        - {x: -7.5, y: 16}
+        - {x: -27.5, y: 16}
+        - {x: -35.5, y: -1}
+        - {x: -35.5, y: -16}
+        - {x: -2.5, y: -16}
+        - {x: 33.5, y: -7}
+        - {x: 35.5, y: -3}
+        - {x: 35.5, y: 8}
+    - name: character_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 313
+        width: 5
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

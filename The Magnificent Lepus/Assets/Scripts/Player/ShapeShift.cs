@@ -70,6 +70,7 @@ public class ShapeShift : MonoBehaviour {
                     currentSkill = null;
                 }
                 pi.SetState(ShapeShiftState.None);
+                pi.ClearState();
             }
         }
     }
