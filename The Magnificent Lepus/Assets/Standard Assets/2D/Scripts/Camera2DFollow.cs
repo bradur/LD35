@@ -16,6 +16,14 @@ namespace UnityStandardAssets._2D
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
 
+        [SerializeField]
+        [Range(-20, 20)]
+        private float minY = 0f;
+
+        [SerializeField]
+        [Range(0, 100)]
+        private float maxY = 60f;
+
         // Use this for initialization
         private void Start()
         {
@@ -44,6 +52,8 @@ namespace UnityStandardAssets._2D
 
             Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward*m_OffsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+
+            newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
 
             transform.position = newPos;
 
