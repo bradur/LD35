@@ -11,6 +11,9 @@ public class Blastoff : MonoBehaviour {
     [Range(0, 100)]
     private float speed;
 
+    private bool inTheAir = false;
+    public bool InTheAir { get { return inTheAir; } }
+
     // Use this for initialization
     void Start () {
     }
@@ -24,11 +27,12 @@ public class Blastoff : MonoBehaviour {
         //rb2d.AddForce(transform.forward * speed, ForceMode2D.Impulse);
 
         rb2d.velocity = new Vector3(1, 1, 0) * speed;
+        inTheAir = true;
     }
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Shoot")) && !InTheAir)
         {
             Shoot();
         }

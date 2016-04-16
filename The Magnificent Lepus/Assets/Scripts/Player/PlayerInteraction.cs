@@ -19,10 +19,19 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField]
     private ShapeShiftState state;
 
+    [SerializeField]
+    private Rigidbody2D rb2d;
+
+    private float originalGravityScale;
+
+    [SerializeField]
+    [Range(0, 1)]
+    private float glideGravityScale;
+
     // Use this for initialization
     void Start()
     {
-
+        originalGravityScale = rb2d.gravityScale;
     }
 
     // Update is called once per frame
@@ -44,6 +53,14 @@ public class PlayerInteraction : MonoBehaviour
 
     public void SetState(ShapeShiftState newState)
     {
+        if (state == ShapeShiftState.Glide && newState != ShapeShiftState.Glide)
+        {
+            rb2d.gravityScale = originalGravityScale;
+        }
         state = newState;
+        if (state == ShapeShiftState.Glide)
+        {
+            rb2d.gravityScale = glideGravityScale;
+        }
     }
 }

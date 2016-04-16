@@ -13,7 +13,13 @@ public class ShapeShift : MonoBehaviour {
     private PlayerInteraction pi;
 
     [SerializeField]
+    private Blastoff bo;
+
+    [SerializeField]
     private List<Skill> skills = new List<Skill>();
+
+    private Skill currentSkill;
+    private Skill nextSkill;
 
     private string[] keys = 
     {
@@ -28,9 +34,8 @@ public class ShapeShift : MonoBehaviour {
     void Update () {
         for (int i = 0; i < keys.Length; i += 1)
         {
-            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode(keys[i])))
+            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode(keys[i])) && bo.InTheAir)
             {
-                Debug.Log(OptionsManager.main.GetKeyCode(keys[i]) + " was pressed!");
                 UseSkill(i);
                 break;
             }
@@ -42,16 +47,39 @@ public class ShapeShift : MonoBehaviour {
         Skill skill = skills[skillNum];
         if (skill != null)
         {
-            if (!isOnCoolDown)
+            if (currentSkill != null && currentSkill.IsInUse() && currentSkill != skill)
             {
-                // shapeshift here
+                currentSkill.Clear();
+                nextSkill = skill;
+                Debug.Log("<b>Current skill:</b> " + currentSkill.name + ". Next skill: " + nextSkill.name);
+            }
+            else if (!skill.IsInUse())
+            {
+                Debug.Log("<b>No skill in use. Use:</b> " + skill.name);
                 skill.Use();
+                currentSkill = skill;
                 pi.SetState(skill.State);
             }
             else
             {
-                skill.CantUse();
+                Debug.Log("<b>Disabling skill:</b> " + skill.name);
+                skill.Clear();
+                if (currentSkill != null)
+                {
+                    currentSkill.Clear();
+                    currentSkill = null;
+                }
+                pi.SetState(ShapeShiftState.None);
             }
+        }
+    }
+
+    public void NextSkill()
+    {
+        if (nextSkill != null)
+        {
+            UseSkill(nextSkill.SkillNumber);
+            nextSkill = null;
         }
     }
 }

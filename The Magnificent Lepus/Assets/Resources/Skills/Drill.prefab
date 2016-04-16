@@ -186,6 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 2
   animator: {fileID: 9599718}
+  skillNumber: 0
+  shapeShift: {fileID: 0}
 --- !u!222 &22214698
 CanvasRenderer:
   m_ObjectHideFlags: 1

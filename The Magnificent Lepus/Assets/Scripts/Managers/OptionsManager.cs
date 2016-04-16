@@ -4,17 +4,15 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class OptionsManager : MonoBehaviour {
 
     [SerializeField]
-    private KeyCode FirstSkillKey;
+    private List<string> keyNames = new List<string>();
+
     [SerializeField]
-    private KeyCode SecondSkillKey;
-    [SerializeField]
-    private KeyCode ThirdSkillKey;
-    [SerializeField]
-    private KeyCode FourthSkillKey;
+    private List<KeyCode> keyCodes = new List<KeyCode>();
 
     public static OptionsManager main;
 
@@ -33,21 +31,9 @@ public class OptionsManager : MonoBehaviour {
 
     public KeyCode GetKeyCode(string key)
     {
-        if (key == "FirstSkill")
+        if (keyNames.Contains(key))
         {
-            return FirstSkillKey;
-        }
-        else if (key == "SecondSkill")
-        {
-            return SecondSkillKey;
-        }
-        else if (key == "ThirdSkill")
-        {
-            return ThirdSkillKey;
-        }
-        else if (key == "FourthSkill")
-        {
-            return FourthSkillKey;
+            return keyCodes[keyNames.IndexOf(key)];
         }
         return KeyCode.None;
     }

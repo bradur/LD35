@@ -411,6 +411,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11496786, guid: 3d056c6d1c29cd244971053845c9fb33, type: 2}
+      propertyPath: shapeShift
+      value: 
+      objectReference: {fileID: 1267438317}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d056c6d1c29cd244971053845c9fb33, type: 2}
   m_IsPrefabParent: 0
@@ -469,6 +473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   animator: {fileID: 0}
+  skillNumber: 0
+  shapeShift: {fileID: 0}
 --- !u!114 &290236859 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11496786, guid: 3d056c6d1c29cd244971053845c9fb33,
@@ -957,10 +963,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 069ed53f1f9385d429cd88896379e326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstSkillKey: 113
-  SecondSkillKey: 119
-  ThirdSkillKey: 101
-  FourthSkillKey: 114
+  keyNames:
+  - FirstSkill
+  - SecondSkill
+  - ThirdSkill
+  - FourthSkill
+  - Shoot
+  - 
+  - 
+  - 
+  - 
+  - 
+  keyCodes: 71000000770000006500000072000000200000000000000000000000000000000000000000000000
 --- !u!1 &710914578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1452,8 @@ MonoBehaviour:
   drillable:
   - Wall
   state: 0
+  rb2d: {fileID: 1267438312}
+  glideGravityScale: 0.5
 --- !u!58 &1267438316
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1464,6 +1480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pi: {fileID: 1267438315}
+  bo: {fileID: 1267438314}
   skills:
   - {fileID: 1840302287}
   - {fileID: 1510823728}
@@ -1858,6 +1875,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11433690, guid: 6961bb6f4dae97942b292e04470366b1, type: 2}
+      propertyPath: shapeShift
+      value: 
+      objectReference: {fileID: 1267438317}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6961bb6f4dae97942b292e04470366b1, type: 2}
   m_IsPrefabParent: 0
@@ -1940,6 +1961,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11498000, guid: 639c8aeaf50572b438a2c30f70ff5e65, type: 2}
+      propertyPath: shapeShift
+      value: 
+      objectReference: {fileID: 1267438317}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 639c8aeaf50572b438a2c30f70ff5e65, type: 2}
   m_IsPrefabParent: 0
