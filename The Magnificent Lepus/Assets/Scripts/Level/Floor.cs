@@ -13,14 +13,22 @@ public class Floor : MonoBehaviour {
     [Range(0.5f, 3f)]
     private float collisionStayUntilPrompt = 0.5f;
 
+    private bool popupSpawned = false;
+
     void Start () {
     
     }
 
     void Update () {
-        if (collisionTimer > collisionStayUntilPrompt)
+        if (collisionTimer > collisionStayUntilPrompt && !popupSpawned)
         {
-            // prompt here
+            UIManager.main.SpawnPopup(
+                "Failure!",
+                "Do you want to try again?\n\nPress " + OptionsManager.main.GetKeyCode("Restart"),
+                true
+            );
+            popupSpawned = true;
+            collisionTimer = 0f;
         }
     }
 
