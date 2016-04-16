@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     private int currentLevel = 0;
 
     private bool waitForNextLevelConfirmation = false;
+    public bool WaitForNextLevelConfirmation { get { return waitForNextLevelConfirmation; } }
     private bool waitForGameEndConfirm = false;
+    
     private bool waitForPauseMenuConfirm = false;
 
     void Awake()

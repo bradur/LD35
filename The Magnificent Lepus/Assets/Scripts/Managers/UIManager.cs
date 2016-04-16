@@ -24,6 +24,9 @@ public class UIManager : MonoBehaviour
 
     private List<InfoPopup> popupList = new List<InfoPopup>();
 
+    [SerializeField]
+    private List<Skill> skillList = new List<Skill>();
+
     void Awake()
     {
         main = this;
@@ -39,7 +42,12 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void SpawnPopup(string title, string description, bool stopTheTime)
+    public List<Skill> GetSkills()
+    {
+        return skillList;
+    }
+
+    public InfoPopup SpawnPopup(string title, string description, bool stopTheTime)
     {
         if (stopTheTime)
         {
@@ -50,6 +58,7 @@ public class UIManager : MonoBehaviour
         InfoPopup newPopup = newPopupObject.GetComponent<InfoPopup>();
         newPopup.Init(title, description);
         popupList.Add(newPopup);
+        return newPopup;
     }
 
     public void KillAllPopups()

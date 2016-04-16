@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &124694
 GameObject:
   m_ObjectHideFlags: 1
@@ -1203,11 +1203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11480824}
   bo: {fileID: 11410302}
-  skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &11437636
 MonoBehaviour:
   m_ObjectHideFlags: 1

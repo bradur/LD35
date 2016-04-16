@@ -36,6 +36,12 @@ public class Skill : MonoBehaviour {
     
     }
 
+    public void Init(ShapeShift newShift)
+    {
+        shapeShift = newShift;
+        Clear();
+    }
+
     public void Use()
     {
         animator.SetTrigger("UseSkill");

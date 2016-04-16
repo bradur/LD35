@@ -1180,9 +1180,9 @@ MonoBehaviour:
   pi: {fileID: 11491772}
   bo: {fileID: 11492528}
   skills:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11498000, guid: 639c8aeaf50572b438a2c30f70ff5e65, type: 2}
+  - {fileID: 11433690, guid: 6961bb6f4dae97942b292e04470366b1, type: 2}
+  - {fileID: 11496786, guid: 3d056c6d1c29cd244971053845c9fb33, type: 2}
   - {fileID: 0}
 --- !u!114 &11417416
 MonoBehaviour:

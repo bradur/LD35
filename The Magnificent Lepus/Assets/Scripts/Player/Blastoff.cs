@@ -34,6 +34,8 @@ public class Blastoff : MonoBehaviour {
         }
         //rb2d.AddForce(transform.forward * speed, ForceMode2D.Impulse);
 
+        SoundManager.main.Play("Cannon");
+
         rb2d.velocity = new Vector3(1, 1, 0) * speed;
         inTheAir = true;
     }

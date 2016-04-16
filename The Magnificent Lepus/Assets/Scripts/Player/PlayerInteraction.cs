@@ -42,6 +42,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private string animationQueue = "";
 
+    private string[] bounces = new[] { "Bounce 1", "Bounce 2" };
+
     // Use this for initialization
     void Start()
     {
@@ -63,6 +65,18 @@ public class PlayerInteraction : MonoBehaviour
             {
                 collision.gameObject.GetComponent<InteractiveObstacle>().Kill();
             }
+        }
+        else if (state == ShapeShiftState.Bounce)
+        {
+            SoundManager.main.Play(bounces[Random.Range(0, bounces.Length)]);
+        }
+        if (collision.gameObject.tag == "Respawn")
+        {
+            UIManager.main.SpawnPopup(
+                "Failure!",
+                "You fell off the face of the Earth!\n\nPress " + OptionsManager.main.GetKeyCode("Restart") + " to retry.",
+                true
+            );
         }
     }
 

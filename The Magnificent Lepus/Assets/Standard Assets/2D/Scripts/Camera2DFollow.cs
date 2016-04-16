@@ -21,11 +21,15 @@ public class Camera2DFollow : MonoBehaviour
     [Range(0, 100)]
     private float maxY = 60f;
 
+    private float minZ = -10f;
+
     // Use this for initialization
     private void Start()
     {
-        m_LastTargetPosition = target.position;
-        m_OffsetZ = (transform.position - target.position).z;
+        if (target != null) { 
+            m_LastTargetPosition = target.position;
+            m_OffsetZ = (transform.position - target.position).z;
+        }
         transform.parent = null;
     }
 
@@ -55,6 +59,7 @@ public class Camera2DFollow : MonoBehaviour
         Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
 
         newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
+        newPos.z = minZ;
 
         transform.position = newPos;
 
