@@ -1,1 +1,20 @@
 Theme: Shapeshifting
+
+bs (brainstorming):
+
+- puzzle game
+    * you fit into different shaped "holes" like in that toy for kids
+    * what makes it gamey tho?
+
+- top-down shooter type
+    * you can either be small and hard to hit or big but with more firepower
+    * or even more "shapes"
+
+- sort of a "you need to get from A to B by jumping / flying" game
+    * there are obstacles / paths that require you to shift your shape during the flight
+    * you can maneuver up and down
+    * shapeshifting has a cooldown
+    * the starting shape is always the same | or maybe you can choose
+    * mechanic: shift to your desired shape well before it is needed, so that you can shift into another shape much quicker (cooldown passes)
+    * start with a couple of simple shapes and get more as you progress
+    * each shape helps you fit through different obstacles / speeds your flight / speeds your maneuvering
