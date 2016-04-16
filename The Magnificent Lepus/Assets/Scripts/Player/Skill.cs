@@ -12,11 +12,24 @@ public class Skill : MonoBehaviour {
 
     public ShapeShiftState State { get { return state; } }
 
+    [SerializeField]
+    private Animator animator;
+
     void Start () {
     
     }
 
     void Update () {
     
+    }
+
+    public void Use()
+    {
+        animator.SetTrigger("UseSkill");
+    }
+
+    public void CantUse()
+    {
+        animator.SetTrigger("UnableToUseSkill");
     }
 }

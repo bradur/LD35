@@ -45,7 +45,12 @@ public class ShapeShift : MonoBehaviour {
             if (!isOnCoolDown)
             {
                 // shapeshift here
+                skill.Use();
                 pi.SetState(skill.State);
+            }
+            else
+            {
+                skill.CantUse();
             }
         }
     }
