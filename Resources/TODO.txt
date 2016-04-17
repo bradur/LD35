@@ -1,11 +1,7 @@
 [ ] Sounds:
 [X] - Glide activate
-[ ] - (glid deactivate)
 [X] - Drill activate
-[ ] - (drill deactivate)
 [ ] - Bounce activate
-[ ] - (bounce deactivate)
-
 [X] - Reach target
 
 [ ] - Press button (like R for restart etc)
@@ -27,7 +23,7 @@
 
 
 [ ] - Levels
-[ ]     * Support for levels that only have certain skills available
+[X]     * Support for levels that only have certain skills available
 [ ]     * Create at least 10-15 levels
 [ ]     * Add more stuff than just boxes, like traps that kill you and you have to fly through
 [ ]     * (Load player independent of level ?)

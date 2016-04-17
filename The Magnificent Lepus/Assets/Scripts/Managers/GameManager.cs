@@ -38,10 +38,12 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Restart")))
             {
                 RestartLevel();
+                SoundManager.main.Play("Shortcut");
             }
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Next Level")))
             {
                 currentLevel++;
+                SoundManager.main.Play("Shortcut");
                 LoadLevel(currentLevel);
             }
         }
@@ -49,14 +51,17 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Restart")))
             {
+                SoundManager.main.Play("Shortcut");
                 RestartLevel();
             }
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Main Menu")))
             {
+                SoundManager.main.Play("Shortcut");
                 LoadMainMenu();
             }
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Exit")))
             {
+                SoundManager.main.Play("Shortcut");
                 QuitGame();
             }
         }
@@ -64,14 +69,17 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Restart")))
             {
+                SoundManager.main.Play("Shortcut");
                 RestartLevel();
             }
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Main Menu")))
             {
+                SoundManager.main.Play("Shortcut");
                 LoadMainMenu();
             }
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Pause Menu")))
             {
+                SoundManager.main.Play("Shortcut");
                 UIManager.main.KillAllPopups();
                 waitForPauseMenuConfirm = false;
             }
@@ -80,10 +88,12 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Restart")))
             {
+                SoundManager.main.Play("Shortcut");
                 RestartLevel();
             }
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Pause Menu")))
             {
+                SoundManager.main.Play("Shortcut");
                 waitForPauseMenuConfirm = true;
                 UIManager.main.SpawnPopup(
                     "Game is paused",
