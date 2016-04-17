@@ -16,12 +16,12 @@
 [ ] - Detect bounce failure (maybe timelimit?)
 [ ] - (Add dash)
 
-[ ] - Main menu:
+[X] - Main menu:
 [X]     * Maybe just a pausemenu from a different camera angle
 [X]     * How-to-play with screenshots
 [X]     * Fancy title
 [X]     * Perhaps a different pitch?
-[ ]     * Continue button
+[X]     * Continue button
 
 
 [ ] - Levels
