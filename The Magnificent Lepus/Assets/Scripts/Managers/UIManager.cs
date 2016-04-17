@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> mainMenuList = new List<GameObject>();
 
-    private int skillSize = 50;
+    private int skillSize = 100;
     private int skillMargin = 10;
 
     [SerializeField]
@@ -99,7 +99,7 @@ public class UIManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        int tempX = -150;
+        int tempX = -300;
         int barSize = skillMargin * 2;
         for (int i = 0; i < enabledSkills.Length; i += 1)
         {
