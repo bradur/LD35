@@ -1,0 +1,31 @@
+[ ] Sounds:
+[X] - Glide activate
+[ ] - (glid deactivate)
+[X] - Drill activate
+[ ] - (drill deactivate)
+[ ] - Bounce activate
+[ ] - (bounce deactivate)
+
+[ ] - Reach target
+
+[ ] - Press button (like R for restart etc)
+
+[ ] - Drill through block
+
+[ ] Music:
+[ ] - Double length, add instruments
+
+[ ] Game:
+
+[ ] - Detect bounce failure (maybe timelimit?)
+[ ] - Main menu
+[ ]     * Maybe just a pausemenu from a different camera angle
+[ ]     * How-to-play with screenshots
+[ ]     * Fancy title
+[ ]     * Perhaps a different pitch?
+[ ]     * Continue button
+
+[ ] - Levels
+[ ]     * Support for levels that only have certain skills available
+[ ]     * Create at least 10-15 levels
+[ ]     * Add more stuff than just boxes, like traps that kill you and you have to fly through
