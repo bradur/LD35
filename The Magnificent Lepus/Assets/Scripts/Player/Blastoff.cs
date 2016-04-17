@@ -42,7 +42,7 @@ public class Blastoff : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Shoot")) && !InTheAir)
+        if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Shoot")) && !InTheAir && Time.timeScale == 1f)
         {
             Shoot();
         }

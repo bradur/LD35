@@ -75,7 +75,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             UIManager.main.SpawnPopup(
                 "Failure!",
-                "You fell off the face of the Earth!\n\nPress " + OptionsManager.main.GetKeyCode("Restart") + " to retry.",
+                "You fell off the face of the Earth!\n\nPress <size=60>" + OptionsManager.main.GetKeyCode("Restart") + "</size> to retry.",
                 true
             );
         }
@@ -115,20 +115,24 @@ public class PlayerInteraction : MonoBehaviour
     void StartAnimation(string animationTrigger)
     {
         ResetTriggers();
-        if (!isAnimating) {
+        animator.SetTrigger("End");
+        animator.SetTrigger(animationTrigger);
+        /*if (!isAnimating) {
             animator.SetTrigger(animationTrigger);
             isAnimating = true;
             animationQueue = "";
         }
         else
         {
+            Debug.Log("Put <b>" + animationTrigger + "</b> to queue.");
             animationQueue = animationTrigger;
             animator.SetTrigger("End");
-        }
+        }*/
     }
 
     void ResetTriggers()
     {
+        animator.ResetTrigger("End");
         animator.ResetTrigger("Drill");
         animator.ResetTrigger("Glide");
         animator.ResetTrigger("Bounce");

@@ -1734,7 +1734,7 @@ MonoBehaviour:
   - Wall
   state: 0
   rb2d: {fileID: 5080070}
-  glideGravityScale: 0.201
+  glideGravityScale: 0.7
   collider: {fileID: 5887106}
   bounceMaterial: {fileID: 6200000, guid: a7aff731d9bb4a145a32ad1a7e890a9b, type: 2}
   animator: {fileID: 9540270}

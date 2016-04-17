@@ -91,6 +91,7 @@ public class UIManager : MonoBehaviour
 
     public void KillAllPopups()
     {
+        Time.timeScale = 1f;
         for (int i = 0; i < popupList.Count; i += 1)
         {
             popupList[i].Kill();

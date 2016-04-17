@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Pause Menu")))
             {
                 UIManager.main.KillAllPopups();
+                waitForPauseMenuConfirm = false;
             }
         }
         else
@@ -86,10 +87,10 @@ public class GameManager : MonoBehaviour
                 waitForPauseMenuConfirm = true;
                 UIManager.main.SpawnPopup(
                     "Game is paused",
-                    OptionsManager.main.GetKeyCode("Pause Menu") + " to resume game\n" +
-                    OptionsManager.main.GetKeyCode("Restart") + " to restart this level\n" +
-                    OptionsManager.main.GetKeyCode("Main Menu") + " to go to main menu\n" +
-                    OptionsManager.main.GetKeyCode("Quit Game While Paused") + " to quit to desktop\n",
+                    "<size=60>" + OptionsManager.main.GetKeyCode("Pause Menu") + "</size> to resume game\n" +
+                    "<size=60>" + OptionsManager.main.GetKeyCode("Restart") + "</size> to restart this level\n" +
+                    "<size=60>" + OptionsManager.main.GetKeyCode("Main Menu") + "</size> to go to main menu\n" +
+                    "<size=60>" + OptionsManager.main.GetKeyCode("Quit Game While Paused") + "</size> to quit to desktop\n",
                     true
                 );
             }
@@ -131,11 +132,28 @@ public class GameManager : MonoBehaviour
 
     public void PassLevel()
     {
-        waitForNextLevelConfirmation = true;
+        if (currentLevel >= WorldManager.main.LevelCount - 1)
+        {
+            waitForGameEndConfirm = true;
+            UIManager.main.SpawnPopup(
+                "The end",
+                "You did it! You passed through each level! Press <size=60>" +
+                OptionsManager.main.GetKeyCode("Exit") + "</size> to quit or <size=60>" +
+                OptionsManager.main.GetKeyCode("Main Menu") + "</size> to go back to main menu.",
+                true
+            );
+        }
+        else {
+            waitForNextLevelConfirmation = true;
+            UIManager.main.SpawnPopup(
+                "Success!",
+                "You passed the level!\n\n Press <size=60>" +
+                OptionsManager.main.GetKeyCode("Next Level") + "</size> to go to the next level or <size=60>" +
+                OptionsManager.main.GetKeyCode("Restart") + "</size> to retry this one.",
+                true
+            );
+            SoundManager.main.Play("Victory");
+        }
     }
 
-    public void FinishGame()
-    {
-        waitForGameEndConfirm = true;
-    }
 }

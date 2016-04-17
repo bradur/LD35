@@ -24,7 +24,7 @@ public class Floor : MonoBehaviour {
         {
             currentPopup = UIManager.main.SpawnPopup(
                 "Failure!",
-                "Do you want to try again?\n\nPress " + OptionsManager.main.GetKeyCode("Restart"),
+                "Do you want to try again?\n\nPress <size=60>" + OptionsManager.main.GetKeyCode("Restart") + "</size>",
                 true
             );
             collisionTimer = 0f;

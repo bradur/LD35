@@ -12,12 +12,6 @@ public class End : MonoBehaviour {
         if (collision2D.gameObject.tag == "Player")
         {
             GameManager.main.PassLevel();
-            UIManager.main.SpawnPopup(
-                "Success!",
-                "You passed the level!\n\n Press " + OptionsManager.main.GetKeyCode("Next Level") + " to go to the next level or " + OptionsManager.main.GetKeyCode("Restart") + " to retry this one.",
-                true
-            );
-            SoundManager.main.Play("Victory");
         }
     }
 }

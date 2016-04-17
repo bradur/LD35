@@ -1029,7 +1029,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.89, y: 7.83, z: 0}
+  m_LocalPosition: {x: 1.73, y: 7.83, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 461592}
@@ -1276,7 +1276,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.52, y: 8.2, z: 0}
+  m_LocalPosition: {x: 4.36, y: 8.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 494656}
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   - Wall
   state: 0
   rb2d: {fileID: 5028386}
-  glideGravityScale: 0.201
+  glideGravityScale: 0.7
   collider: {fileID: 5893714}
   bounceMaterial: {fileID: 6200000, guid: a7aff731d9bb4a145a32ad1a7e890a9b, type: 2}
   animator: {fileID: 9565986}

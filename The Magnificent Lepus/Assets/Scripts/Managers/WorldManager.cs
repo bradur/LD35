@@ -13,6 +13,8 @@ public class WorldManager : MonoBehaviour {
     [SerializeField]
     private List<Level> levels = new List<Level>();
 
+    public int LevelCount { get { return levels.Count; } }
+
     private Level currentLevel = null;
 
     [SerializeField]
@@ -35,16 +37,7 @@ public class WorldManager : MonoBehaviour {
 
     public void LoadLevel(int level)
     {
-        if (level > levels.Count - 1)
-        {
-            UIManager.main.SpawnPopup(
-                "The end",
-                "You did it! You passed through each level! Press " + OptionsManager.main.GetKeyCode("Exit") + " to quit or " + OptionsManager.main.GetKeyCode("Main Menu") + " to go back to main menu.",
-                true
-            );
-        }
-        else
-        {
+        if (level <= levels.Count - 1) {
             if (currentLevel != null)
             {
                 currentLevel.Kill();
@@ -56,7 +49,4 @@ public class WorldManager : MonoBehaviour {
         }
     }
 
-    void Update () {
-    
-    }
 }
