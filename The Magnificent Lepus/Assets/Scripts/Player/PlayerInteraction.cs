@@ -101,11 +101,13 @@ public class PlayerInteraction : MonoBehaviour
         {
             rb2d.gravityScale = glideGravityScale;
             StartAnimation("Glide");
+            SoundManager.main.Play("Glide");
         }
 
         if (state == ShapeShiftState.Drill)
         {
             StartAnimation("Drill");
+            SoundManager.main.Play("Drill");
         }
     }
 
