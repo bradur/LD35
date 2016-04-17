@@ -1482,6 +1482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11457048}
   bo: {fileID: 11481680}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01000000
 --- !u!114 &11428146
 MonoBehaviour:
@@ -1648,6 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 445810}
+  title: Through the roof
 --- !u!212 &21212604
 SpriteRenderer:
   m_ObjectHideFlags: 1

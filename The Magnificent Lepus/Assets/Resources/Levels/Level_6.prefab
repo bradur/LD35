@@ -1354,6 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 442298}
+  title: Feeling bouncy
 --- !u!114 &11415878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1425,6 +1426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11414596}
   bo: {fileID: 11461228}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01010000
 --- !u!114 &11469774
 MonoBehaviour:

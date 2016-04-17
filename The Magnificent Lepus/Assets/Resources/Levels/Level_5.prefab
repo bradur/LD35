@@ -1179,6 +1179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11491772}
   bo: {fileID: 11492528}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01000100
 --- !u!114 &11417416
 MonoBehaviour:
@@ -1236,6 +1237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 452878}
+  title: Walls can't keep me
 --- !u!114 &11464874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2016,7 +2018,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.16199984, y: 0.49800003}
+  m_ConnectedAnchor: {x: 0.16199984, y: 0.49800006}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2039,7 +2041,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.07100027, y: 0.45700005}
+  m_ConnectedAnchor: {x: 0.07100027, y: 0.45700002}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

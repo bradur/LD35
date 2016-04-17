@@ -42,6 +42,11 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Skill dummySkill;
 
+    [SerializeField]
+    private GameObject titleDisplayPrefab;
+
+    private TitleDisplay titleDisplay;
+
     void Awake()
     {
         main = this;
@@ -126,6 +131,15 @@ public class UIManager : MonoBehaviour
         return newPopup;
     }
 
+    public void SpawnTitle(string title)
+    {
+        Debug.Log("Title: "+ title);
+        GameObject titleDisplayObject = (GameObject)Instantiate(titleDisplayPrefab);
+        titleDisplay = titleDisplayObject.GetComponent<TitleDisplay>();
+        titleDisplay.transform.SetParent(infoPanelContainer, false);
+        titleDisplay.Init(title);
+    }
+
     public void KillAllPopups()
     {
         Time.timeScale = 1f;
@@ -133,6 +147,7 @@ public class UIManager : MonoBehaviour
         {
             popupList[i].Kill();
         }
+
         popupList.Clear();
     }
 }

@@ -1028,6 +1028,7 @@ MonoBehaviour:
   mainMenuList:
   - {fileID: 154710, guid: 5e93a60d769bea147af8979019a667b3, type: 2}
   dummySkill: {fileID: 11470894, guid: 6961bb6f4dae97942b292e04470366b1, type: 2}
+  titleDisplayPrefab: {fileID: 175768, guid: 7d6b800981a7deb4bb5ae1c2359c09bf, type: 2}
 --- !u!114 &678810130
 MonoBehaviour:
   m_ObjectHideFlags: 0

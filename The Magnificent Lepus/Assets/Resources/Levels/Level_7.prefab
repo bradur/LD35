@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11413826}
   bo: {fileID: 11450776}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01010100
 --- !u!114 &11447472
 MonoBehaviour:
@@ -1360,6 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 412594}
+  title: Multitasking
 --- !u!114 &11497464
 MonoBehaviour:
   m_ObjectHideFlags: 1

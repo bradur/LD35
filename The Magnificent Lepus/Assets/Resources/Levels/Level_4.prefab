@@ -1574,6 +1574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11480824}
   bo: {fileID: 11410302}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01000100
 --- !u!114 &11420390
 MonoBehaviour:
@@ -1686,6 +1687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 472492}
+  title: So close
 --- !u!114 &11469020
 MonoBehaviour:
   m_ObjectHideFlags: 1

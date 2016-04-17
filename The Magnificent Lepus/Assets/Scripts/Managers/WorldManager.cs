@@ -52,6 +52,7 @@ public class WorldManager : MonoBehaviour {
                 currentLevel.Kill();
             }
             currentLevel = Instantiate(levels[level]);
+            UIManager.main.SpawnTitle(currentLevel.Title);
             currentLevel.transform.parent = worldContainer;
             currentLevel.transform.position = Vector3.zero;
             Camera.main.GetComponent<Camera2DFollow>().SetTarget(currentLevel.PlayerTransform);

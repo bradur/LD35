@@ -1191,6 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 496030}
+  title: Jump in
 --- !u!114 &11432794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1289,6 +1290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11449618}
   bo: {fileID: 11402352}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 00010000
 --- !u!114 &11494396
 MonoBehaviour:

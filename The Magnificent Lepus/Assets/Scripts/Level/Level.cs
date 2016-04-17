@@ -10,6 +10,10 @@ public class Level : MonoBehaviour {
     [SerializeField]
     private Transform playerTransform;
 
+    [SerializeField]
+    private string title;
+    public string Title { get { return title; } }
+
     public Transform PlayerTransform { get { return playerTransform; } }
 
     void Start () {

@@ -1988,6 +1988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 405128}
+  title: I'll leave it to luck
 --- !u!114 &11419384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2161,6 +2162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pi: {fileID: 11479872}
   bo: {fileID: 11447588}
+  ArrowKeysEqualWasd: 1
   skillsEnabled: 01010100
 --- !u!114 &11479872
 MonoBehaviour:
