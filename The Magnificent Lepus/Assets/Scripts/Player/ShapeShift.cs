@@ -15,7 +15,7 @@ public class ShapeShift : MonoBehaviour {
     [SerializeField]
     private Blastoff bo;
 
-    private List<Skill> skills;
+    private List<Skill> skills = new List<Skill>();
 
     private Skill currentSkill;
     private Skill nextSkill;
@@ -40,12 +40,12 @@ public class ShapeShift : MonoBehaviour {
 
     void Start()
     {
-        skills = UIManager.main.GetSkills();
+        skills = UIManager.main.SetSkills(skillsEnabled);
         for (int i = 0; i < skills.Count; i += 1)
         {
             skills[i].Init(this);
         }
-        UIManager.main.SetSkills(skillsEnabled);
+        
     }
 
     void Update () {

@@ -21,6 +21,10 @@ public class MusicManager : MonoBehaviour
     [Range(1f, 1.5f)]
     private float successPitch = 1.2f;
 
+    [SerializeField]
+    [Range(0.5f, 2.5f)]
+    private float mainMenuPitch = 0.8f;
+
     private float originalPitch = 1f;
 
     private bool pitchHasChanged = false;
@@ -40,6 +44,12 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         originalPitch = theme.pitch;
+        theme.pitch = mainMenuPitch;
+    }
+
+    public void StartGame()
+    {
+        pitchHasChanged = true;
     }
 
     void Update()

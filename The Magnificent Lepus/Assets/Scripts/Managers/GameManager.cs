@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     private bool waitForNextLevelConfirmation = false;
     public bool WaitForNextLevelConfirmation { get { return waitForNextLevelConfirmation; } }
+
+    private bool waitForMainMenuConfirm = true;
+    public bool WaitForMainMenuConfirmation { get { return waitForMainMenuConfirm; } }
+
     private bool waitForGameEndConfirm = false;
     
     private bool waitForPauseMenuConfirm = false;
@@ -84,6 +88,20 @@ public class GameManager : MonoBehaviour
                 waitForPauseMenuConfirm = false;
             }
         }
+        else if (waitForMainMenuConfirm) {
+            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Start")))
+            {
+                SoundManager.main.Play("Shortcut");
+                WorldManager.main.StartGame();
+                UIManager.main.KillAllPopups();
+                waitForMainMenuConfirm = false;
+            }
+            else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Exit")))
+            {
+                SoundManager.main.Play("Shortcut");
+                QuitGame();
+            }
+        }
         else
         {
             if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Restart")))
@@ -130,8 +148,11 @@ public class GameManager : MonoBehaviour
 
     void LoadMainMenu()
     {
-        // TODO
-        Debug.Log("<b>PLACEHOLDER</b>: Load Main Menu");
+        waitForNextLevelConfirmation = false;
+        waitForPauseMenuConfirm = false;
+        waitForGameEndConfirm = false;
+        waitForMainMenuConfirm = true;
+        UIManager.main.OpenMainMenu();
     }
 
     void QuitGame()

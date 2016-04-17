@@ -16,6 +16,17 @@ public class InfoPopup : MonoBehaviour {
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private bool AnimateOnAwake = false;
+
+    void Awake()
+    {
+        if (AnimateOnAwake)
+        {
+            animator.SetTrigger("Start");
+        }
+    }
+
     public void Init(string title, string description)
     {
         titleTxt.text = title;

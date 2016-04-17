@@ -22,6 +22,7 @@ public class WorldManager : MonoBehaviour {
 
     [SerializeField]
     private bool debugMode = false;
+    public bool DebugMode { get { return debugMode; } }
 
     void Awake ()
     {
@@ -30,9 +31,17 @@ public class WorldManager : MonoBehaviour {
 
     void Start()
     {
-        if (!debugMode) { 
+
+    }
+
+    public void StartGame()
+    {
+        if (!debugMode)
+        {
             LoadLevel(GameManager.main.CurrentLevel);
         }
+        UIManager.main.ShowSkillBar();
+        MusicManager.main.StartGame();
     }
 
     public void LoadLevel(int level)

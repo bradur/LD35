@@ -4,7 +4,7 @@
 [ ] - Bounce activate
 [X] - Reach target
 
-[ ] - Press button (like R for restart etc)
+[X] - Press button (like R for restart etc)
 
 [ ] - Drill through block
 
@@ -14,16 +14,19 @@
 [ ] Game:
 
 [ ] - Detect bounce failure (maybe timelimit?)
-[ ] - Main menu
-[ ]     * Maybe just a pausemenu from a different camera angle
+[ ] - (Add dash)
+
+[ ] - Main menu:
+[X]     * Maybe just a pausemenu from a different camera angle
 [ ]     * How-to-play with screenshots
-[ ]     * Fancy title
-[ ]     * Perhaps a different pitch?
+[X]     * Fancy title
+[X]     * Perhaps a different pitch?
 [ ]     * Continue button
 
 
 [ ] - Levels
 [X]     * Support for levels that only have certain skills available
-[ ]     * Create at least 10-15 levels
-[ ]     * Add more stuff than just boxes, like traps that kill you and you have to fly through
+[X]     * Create at least 10
+[ ]     * Create 15 or more levels
+[ ]     * (Add more stuff than just boxes, like traps that kill you and you have to fly through)
 [ ]     * (Load player independent of level ?)
