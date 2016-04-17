@@ -133,7 +133,6 @@ public class UIManager : MonoBehaviour
 
     public void SpawnTitle(string title)
     {
-        Debug.Log("Title: "+ title);
         GameObject titleDisplayObject = (GameObject)Instantiate(titleDisplayPrefab);
         titleDisplay = titleDisplayObject.GetComponent<TitleDisplay>();
         titleDisplay.transform.SetParent(infoPanelContainer, false);

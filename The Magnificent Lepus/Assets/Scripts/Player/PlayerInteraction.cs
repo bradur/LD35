@@ -117,17 +117,6 @@ public class PlayerInteraction : MonoBehaviour
         ResetTriggers();
         animator.SetTrigger("End");
         animator.SetTrigger(animationTrigger);
-        /*if (!isAnimating) {
-            animator.SetTrigger(animationTrigger);
-            isAnimating = true;
-            animationQueue = "";
-        }
-        else
-        {
-            Debug.Log("Put <b>" + animationTrigger + "</b> to queue.");
-            animationQueue = animationTrigger;
-            animator.SetTrigger("End");
-        }*/
     }
 
     void ResetTriggers()

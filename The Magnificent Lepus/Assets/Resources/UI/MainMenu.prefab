@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 22414166}
   - 222: {fileID: 22238662}
+  - 114: {fileID: 11411810}
   m_Layer: 5
   m_Name: MainMenuAnimated
   m_TagString: Untagged
@@ -1033,6 +1034,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: <size=40>WASD</size> or the <size=40>ARROW KEYS</size> to use the skills
+--- !u!114 &11411810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa6d2cf7badd20438cd7b32dd152ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtComponent: {fileID: 11449684}
 --- !u!114 &11420484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1486,7 +1499,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 86cff12518a7d2a4d8691993346dfb5a, type: 3}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1497,9 +1510,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '<size=40>Space</size>  start the game
+  m_Text: '<size=30>Space</size>  start the game
 
-    <size=40>Esc</size>      quit the game'
+    <size=30>Esc</size>      quit the games'
 --- !u!114 &11452476
 MonoBehaviour:
   m_ObjectHideFlags: 1

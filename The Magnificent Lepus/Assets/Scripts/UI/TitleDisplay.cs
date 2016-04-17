@@ -23,7 +23,6 @@ public class TitleDisplay : MonoBehaviour {
 
     public void Kill()
     {
-        Debug.Log("Killing titedisp");
         Destroy(gameObject);
     }
 }

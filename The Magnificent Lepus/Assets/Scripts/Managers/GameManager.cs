@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int currentLevel = 0;
 
+    private int continueLevel = -1;
+    public int ContinueLevel { get { return continueLevel - 1; } }
+
     public int CurrentLevel { get { return currentLevel; } }
 
     private bool waitForNextLevelConfirmation = false;
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        continueLevel = PlayerPrefs.GetInt("continue");
     }
 
     void Update()
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
             else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Next Level")))
             {
                 currentLevel++;
+                continueLevel = currentLevel + 1;
+                PlayerPrefs.SetInt("continue", continueLevel);
                 SoundManager.main.Play("Shortcut");
                 LoadLevel(currentLevel);
             }
@@ -102,6 +107,13 @@ public class GameManager : MonoBehaviour
                 SoundManager.main.Play("Shortcut");
                 QuitGame();
             }
+            else if (Input.GetKeyUp(OptionsManager.main.GetKeyCode("Continue")))
+            {
+                if (continueLevel > 0) { 
+                    SoundManager.main.Play("Shortcut");
+                    LoadLevel(ContinueLevel);
+                }
+            }
         }
         else
         {
@@ -133,6 +145,7 @@ public class GameManager : MonoBehaviour
         waitForNextLevelConfirmation = false;
         waitForPauseMenuConfirm = false;
         waitForGameEndConfirm = false;
+        waitForMainMenuConfirm = false;
         LoadLevel(currentLevel);
     }
 
@@ -143,12 +156,15 @@ public class GameManager : MonoBehaviour
         waitForNextLevelConfirmation = false;
         waitForPauseMenuConfirm = false;
         waitForGameEndConfirm = false;
+        waitForMainMenuConfirm = false;
+        currentLevel = level;
         //Application.LoadLevel(0); // is this needed?
         WorldManager.main.LoadLevel(level);
     }
 
     void LoadMainMenu()
     {
+        currentLevel = 0;
         waitForNextLevelConfirmation = false;
         waitForPauseMenuConfirm = false;
         waitForGameEndConfirm = false;

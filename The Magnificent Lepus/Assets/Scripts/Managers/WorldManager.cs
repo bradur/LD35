@@ -46,6 +46,7 @@ public class WorldManager : MonoBehaviour {
 
     public void LoadLevel(int level)
     {
+        UIManager.main.ShowSkillBar();
         if (level <= levels.Count - 1) {
             if (currentLevel != null)
             {
