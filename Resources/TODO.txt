@@ -8,8 +8,8 @@
 
 [ ] - Drill through block
 
-[ ] Music:
-[ ] - Double length, add instruments
+[X] Music:
+[X] - Double length, add instruments
 
 [ ] Game:
 

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private bool waitForGameEndConfirm = false;
     
     private bool waitForPauseMenuConfirm = false;
+    public bool WaitForPauseMenuConfirm { get { return waitForPauseMenuConfirm; } }
 
     void Awake()
     {

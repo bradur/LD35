@@ -188,6 +188,8 @@ MonoBehaviour:
   animator: {fileID: 9547880}
   skillNumber: 1
   shapeShift: {fileID: 0}
+  skillImg: {fileID: 11455314}
+  disabledSkillColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
 --- !u!222 &22201110
 CanvasRenderer:
   m_ObjectHideFlags: 1

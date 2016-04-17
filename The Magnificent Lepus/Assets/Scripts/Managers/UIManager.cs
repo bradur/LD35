@@ -98,22 +98,15 @@ public class UIManager : MonoBehaviour
         int barSize = skillMargin * 2;
         for (int i = 0; i < enabledSkills.Length; i += 1)
         {
-            if (enabledSkills[i])
-            {
-                tempX += skillSize + skillMargin;
-                barSize += skillSize + skillMargin;
-                
-                GameObject newSkillObject = (GameObject)Instantiate(skillList[i]);
-                Skill newSkill = newSkillObject.GetComponent<Skill>();
-                newSkill.transform.SetParent(skillBarParent.transform);
-                newSkills.Add(newSkill);
-                RectTransform rt = newSkill.GetComponent<RectTransform>();
-                rt.anchoredPosition = new Vector2(tempX, 0);
-            }
-            else
-            {
-                newSkills.Add(dummySkill);
-            }
+            tempX += skillSize + skillMargin;
+            barSize += skillSize + skillMargin;
+            GameObject newSkillObject = (GameObject)Instantiate(skillList[i]);
+            Skill newSkill = newSkillObject.GetComponent<Skill>();
+            newSkill.SetEnabled(enabledSkills[i]);
+            newSkill.transform.SetParent(skillBarParent.transform, false);
+            newSkills.Add(newSkill);
+            RectTransform rt = newSkill.GetComponent<RectTransform>();
+            rt.anchoredPosition = new Vector2(tempX, 0);
         }
         skillBar.sizeDelta = new Vector2(barSize, skillBar.sizeDelta.y);
         return newSkills;

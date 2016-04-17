@@ -245,6 +245,7 @@ GameObject:
   - 4: {fileID: 408776}
   - 212: {fileID: 21231470}
   - 61: {fileID: 6182978}
+  - 114: {fileID: 11497882}
   m_Layer: 0
   m_Name: ground (10)
   m_TagString: Untagged
@@ -278,6 +279,7 @@ GameObject:
   - 4: {fileID: 403994}
   - 212: {fileID: 21224304}
   - 61: {fileID: 6132860}
+  - 114: {fileID: 11404390}
   m_Layer: 0
   m_Name: ground (15)
   m_TagString: Untagged
@@ -311,6 +313,7 @@ GameObject:
   - 4: {fileID: 410836}
   - 212: {fileID: 21238402}
   - 61: {fileID: 6165562}
+  - 114: {fileID: 11419384}
   m_Layer: 0
   m_Name: ground (9)
   m_TagString: Untagged
@@ -375,6 +378,7 @@ GameObject:
   - 4: {fileID: 494784}
   - 212: {fileID: 21295454}
   - 61: {fileID: 6190106}
+  - 114: {fileID: 11455160}
   m_Layer: 0
   m_Name: ground (11)
   m_TagString: Untagged
@@ -507,6 +511,7 @@ GameObject:
   - 4: {fileID: 422538}
   - 212: {fileID: 21213852}
   - 61: {fileID: 6161272}
+  - 114: {fileID: 11420360}
   m_Layer: 0
   m_Name: ground (12)
   m_TagString: Untagged
@@ -749,6 +754,7 @@ GameObject:
   - 4: {fileID: 430728}
   - 212: {fileID: 21256376}
   - 61: {fileID: 6142282}
+  - 114: {fileID: 11474536}
   m_Layer: 0
   m_Name: ground (13)
   m_TagString: Untagged
@@ -1914,6 +1920,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f85da5de2037e4f84d4370cb33ad55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11404390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!114 &11404582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1970,6 +1988,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 405128}
+--- !u!114 &11419384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
+--- !u!114 &11420360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!114 &11423274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2038,6 +2080,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a2dcf26e90114f90280b855203026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11455160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!114 &11460490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2071,6 +2125,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a2dcf26e90114f90280b855203026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11474536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!114 &11474848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2115,6 +2181,18 @@ MonoBehaviour:
   collider: {fileID: 5841636}
   bounceMaterial: {fileID: 6200000, guid: a7aff731d9bb4a145a32ad1a7e890a9b, type: 2}
   animator: {fileID: 9590022}
+--- !u!114 &11497882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!212 &21204798
 SpriteRenderer:
   m_ObjectHideFlags: 1

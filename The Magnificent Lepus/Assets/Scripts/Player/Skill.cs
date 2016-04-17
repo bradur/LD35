@@ -4,6 +4,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Skill : MonoBehaviour {
 
@@ -28,12 +29,30 @@ public class Skill : MonoBehaviour {
     [SerializeField]
     private ShapeShift shapeShift;
 
+    private bool isEnabled = true;
+    public bool IsEnabled { get { return isEnabled; } }
+
+    [SerializeField]
+    private Image skillImg;
+
+    [SerializeField]
+    private Color disabledSkillColor;
+
     void Start () {
     
     }
 
     void Update () {
     
+    }
+
+    public void SetEnabled(bool isEnabled)
+    {
+        this.isEnabled = isEnabled;
+        if(!isEnabled){
+            animator.enabled = false;
+            skillImg.color = disabledSkillColor;
+        }
     }
 
     public void Init(ShapeShift newShift)

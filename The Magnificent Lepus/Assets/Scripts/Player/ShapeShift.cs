@@ -20,6 +20,23 @@ public class ShapeShift : MonoBehaviour {
     private Skill currentSkill;
     private Skill nextSkill;
 
+    [SerializeField]
+    private bool ArrowKeysEqualWasd = true;
+
+    private List<KeyCode> arrowKeys = new List<KeyCode>() { 
+        KeyCode.W,
+        KeyCode.A,
+        KeyCode.S,
+        KeyCode.D
+    };
+
+    private List<KeyCode> wasdKeys = new List<KeyCode>() { 
+        KeyCode.UpArrow,
+        KeyCode.LeftArrow,
+        KeyCode.DownArrow,
+        KeyCode.RightArrow
+    };
+
     private string[] keys = 
     {
         "FirstSkill",
@@ -51,7 +68,21 @@ public class ShapeShift : MonoBehaviour {
     void Update () {
         for (int i = 0; i < keys.Length; i += 1)
         {
-            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode(keys[i])) && bo.InTheAir && skillsEnabled[i])
+            KeyCode pressedKey = OptionsManager.main.GetKeyCode(keys[i]);
+            bool keyUpDetected = false;
+            if (arrowKeys.Contains(pressedKey))
+            {
+                keyUpDetected = Input.GetKeyUp(pressedKey) ? true : Input.GetKeyUp(wasdKeys[arrowKeys.IndexOf(pressedKey)]);
+            }
+            else if (wasdKeys.Contains(pressedKey))
+            {
+                keyUpDetected = Input.GetKeyUp(pressedKey) ? true : Input.GetKeyUp(arrowKeys[wasdKeys.IndexOf(pressedKey)]);
+            }
+            else
+            {
+                keyUpDetected = Input.GetKeyUp(pressedKey);
+            }
+            if (keyUpDetected && bo.InTheAir && skillsEnabled[i])
             {
                 UseSkill(i);
                 break;

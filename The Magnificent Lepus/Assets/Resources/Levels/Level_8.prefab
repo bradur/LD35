@@ -259,6 +259,7 @@ GameObject:
   - 4: {fileID: 485374}
   - 212: {fileID: 21236632}
   - 61: {fileID: 6151060}
+  - 114: {fileID: 11481962}
   m_Layer: 0
   m_Name: ground (10)
   m_TagString: Untagged
@@ -341,6 +342,7 @@ GameObject:
   - 4: {fileID: 431672}
   - 212: {fileID: 21252444}
   - 61: {fileID: 6138318}
+  - 114: {fileID: 11406010}
   m_Layer: 0
   m_Name: ground (8)
   m_TagString: Untagged
@@ -453,6 +455,7 @@ GameObject:
   - 4: {fileID: 424036}
   - 212: {fileID: 21222030}
   - 61: {fileID: 6176424}
+  - 114: {fileID: 11418200}
   m_Layer: 0
   m_Name: ground (7)
   m_TagString: Untagged
@@ -1013,6 +1016,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11406010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.07
+--- !u!114 &11418200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.083
 --- !u!114 &11433630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1082,6 +1109,18 @@ MonoBehaviour:
   collider: {fileID: 5885294}
   bounceMaterial: {fileID: 6200000, guid: a7aff731d9bb4a145a32ad1a7e890a9b, type: 2}
   animator: {fileID: 9566760}
+--- !u!114 &11481962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.121
 --- !u!212 &21205928
 SpriteRenderer:
   m_ObjectHideFlags: 1

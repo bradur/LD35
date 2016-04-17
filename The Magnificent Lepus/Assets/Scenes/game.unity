@@ -200,10 +200,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theme: {fileID: 6603269}
-  pausePitch: 0.5
-  successPitch: 1.5
-  mainMenuPitch: 0.8
-  pitchSmooth: 4.05
+  pausePitch: 0.808
+  successPitch: 1.2
+  mainMenuPitch: 1
+  pitchSmooth: 5
 --- !u!1 &18727509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   - Pause Menu
   - Quit Game While Paused
   - Start
-  keyCodes: 71000000770000006500000000000000200000007200000020000000200000001b0000001b0000007100000020000000
+  keyCodes: 61000000770000006400000073000000200000007200000020000000200000001b0000001b0000007100000020000000
 --- !u!114 &678810129
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,17 +56,19 @@ public class MusicManager : MonoBehaviour
     {
         if (Time.timeScale == 0f && !pitchHasChanged)
         {
-            changingPitch = true;
+            
             if (GameManager.main.WaitForNextLevelConfirmation)
             {
+                changingPitch = true;
                 targetPitch = successPitch;
+                pitchHasChanged = true;
             }
-            else
+            else if (GameManager.main.WaitForPauseMenuConfirm)
             {
+                changingPitch = true;
                 targetPitch = pausePitch;
+                pitchHasChanged = true;
             }
-
-            pitchHasChanged = true;
         }
         else if (Time.timeScale == 1f && pitchHasChanged)
         {

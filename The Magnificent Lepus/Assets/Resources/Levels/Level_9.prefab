@@ -182,6 +182,7 @@ GameObject:
   - 4: {fileID: 464536}
   - 212: {fileID: 21251518}
   - 61: {fileID: 6193018}
+  - 114: {fileID: 11404556}
   m_Layer: 0
   m_Name: ground (7)
   m_TagString: Untagged
@@ -1784,6 +1785,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a2dcf26e90114f90280b855203026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11404556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c67491967d6844f979da71ae9caa80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionStayUntilPrompt: 1.07
 --- !u!114 &11408354
 MonoBehaviour:
   m_ObjectHideFlags: 1

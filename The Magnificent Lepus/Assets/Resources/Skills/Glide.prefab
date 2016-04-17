@@ -155,6 +155,8 @@ MonoBehaviour:
   animator: {fileID: 9502016}
   skillNumber: 2
   shapeShift: {fileID: 0}
+  skillImg: {fileID: 11430020}
+  disabledSkillColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
 --- !u!114 &11457446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: E
+  m_Text: D
 --- !u!222 &22225186
 CanvasRenderer:
   m_ObjectHideFlags: 1
