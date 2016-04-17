@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int currentLevel = 0;
 
+    public int CurrentLevel { get { return currentLevel; } }
+
     private bool waitForNextLevelConfirmation = false;
     public bool WaitForNextLevelConfirmation { get { return waitForNextLevelConfirmation; } }
     private bool waitForGameEndConfirm = false;

@@ -30,6 +30,14 @@ public class ShapeShift : MonoBehaviour {
 
     private bool isOnCoolDown = false;
 
+    [SerializeField]
+    private bool[] skillsEnabled = {
+        true,
+        true,
+        true,
+        true
+    };
+
     void Start()
     {
         skills = UIManager.main.GetSkills();
@@ -37,12 +45,13 @@ public class ShapeShift : MonoBehaviour {
         {
             skills[i].Init(this);
         }
+        UIManager.main.SetSkills(skillsEnabled);
     }
 
     void Update () {
         for (int i = 0; i < keys.Length; i += 1)
         {
-            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode(keys[i])) && bo.InTheAir)
+            if (Input.GetKeyUp(OptionsManager.main.GetKeyCode(keys[i])) && bo.InTheAir && skillsEnabled[i])
             {
                 UseSkill(i);
                 break;

@@ -17,6 +17,7 @@ public class End : MonoBehaviour {
                 "You passed the level!\n\n Press " + OptionsManager.main.GetKeyCode("Next Level") + " to go to the next level or " + OptionsManager.main.GetKeyCode("Restart") + " to retry this one.",
                 true
             );
+            SoundManager.main.Play("Victory");
         }
     }
 }

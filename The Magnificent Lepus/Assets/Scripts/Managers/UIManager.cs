@@ -27,6 +27,12 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private List<Skill> skillList = new List<Skill>();
 
+    [SerializeField]
+    private RectTransform skillBar;
+
+    private int skillSize = 50;
+    private int skillMargin = 10;
+
     void Awake()
     {
         main = this;
@@ -45,6 +51,28 @@ public class UIManager : MonoBehaviour
     public List<Skill> GetSkills()
     {
         return skillList;
+    }
+
+    public void SetSkills(bool[] enabledSkills)
+    {
+        int tempX = -150;
+        int barSize = skillMargin * 2;
+        for (int i = 0; i < enabledSkills.Length; i += 1)
+        {
+            if (enabledSkills[i])
+            {
+                tempX += skillSize + skillMargin;
+                barSize += skillSize + skillMargin;
+                skillList[i].gameObject.SetActive(true);
+                RectTransform rt = skillList[i].GetComponent<RectTransform>();
+                rt.anchoredPosition = new Vector2(tempX, 0);
+            }
+            else
+            {
+                skillList[i].gameObject.SetActive(false);
+            }
+        }
+        skillBar.sizeDelta = new Vector2(barSize, skillBar.sizeDelta.y);
     }
 
     public InfoPopup SpawnPopup(string title, string description, bool stopTheTime)

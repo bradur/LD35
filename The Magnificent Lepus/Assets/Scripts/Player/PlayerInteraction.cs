@@ -7,7 +7,8 @@ public enum ShapeShiftState
     None,
     Bounce,
     Drill,
-    Glide
+    Glide,
+    Dash
 }
 
 public class PlayerInteraction : MonoBehaviour

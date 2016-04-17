@@ -6,7 +6,7 @@
 [ ] - Bounce activate
 [ ] - (bounce deactivate)
 
-[ ] - Reach target
+[X] - Reach target
 
 [ ] - Press button (like R for restart etc)
 
@@ -25,7 +25,9 @@
 [ ]     * Perhaps a different pitch?
 [ ]     * Continue button
 
+
 [ ] - Levels
 [ ]     * Support for levels that only have certain skills available
 [ ]     * Create at least 10-15 levels
 [ ]     * Add more stuff than just boxes, like traps that kill you and you have to fly through
+[ ]     * (Load player independent of level ?)

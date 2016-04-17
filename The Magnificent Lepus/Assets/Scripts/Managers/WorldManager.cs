@@ -18,6 +18,9 @@ public class WorldManager : MonoBehaviour {
     [SerializeField]
     private Transform worldContainer;
 
+    [SerializeField]
+    private bool debugMode = false;
+
     void Awake ()
     {
         main = this;
@@ -25,7 +28,9 @@ public class WorldManager : MonoBehaviour {
 
     void Start()
     {
-        LoadLevel(0);
+        if (!debugMode) { 
+            LoadLevel(GameManager.main.CurrentLevel);
+        }
     }
 
     public void LoadLevel(int level)
